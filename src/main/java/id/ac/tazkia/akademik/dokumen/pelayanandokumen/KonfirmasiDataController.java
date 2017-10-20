@@ -11,4 +11,24 @@ public class KonfirmasiDataController {
 
     }
 
+    @GetMapping("/notifikasi/email")
+    public void notifikasiEmail(){
+
+    }
+
+    @GetMapping("/notifikasi/pembayaran")
+    public void notifikasiPembayaran(){
+
+    }
+
+    @GetMapping("/notifikasi/registrasi")
+    public void notifikasiRegistrasi(){
+
+    }
+
+    @GetMapping("/notifikasi/sms")
+    public void notifikasiSms(){
+
+    }
+
 }

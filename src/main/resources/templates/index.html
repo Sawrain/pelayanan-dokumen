@@ -17,15 +17,27 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
+   <!-- <link href="css/custom.css" rel="stylesheet">-->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+      .back-to-top {
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display:none;
+      }
+
+    </style>
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav style="background-color: #0e2658" class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/stei-tazkia.png" alt="logo" style="width:30px;height:50px;"/></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logotazkia.png" alt="logo" style="width:50px;height:50px;"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +50,7 @@
               <a class="nav-link js-scroll-trigger" href="#services">Pengumuman</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Kontak</a>
             </li>
           </ul>
         </div>
@@ -63,8 +75,8 @@
                 <h3>Form Registrasi</h3>
               </div>
               <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <h4 class="card-title"></h4>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
                 <p class="card-text">
 
                 <div class="input-group">
@@ -90,7 +102,7 @@
                 <br>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                  <input type="text" class="form-control" placeholder="Masukan Email">
+                  <input type="email" class="form-control" placeholder="Masukan Email">
                 </div>
                 <br>
                 <div class="input-group">
@@ -122,7 +134,6 @@
             <p class="lead">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
             <p class="lead">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
             <p class="lead">- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-
           </div>
         </div>
       </div>
@@ -132,7 +143,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
+            <h2>Kontak Kami</h2>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
           </div>
         </div>
@@ -140,10 +151,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer style="background-color: #0e2658" class="py-5 ">
       <div class="container">
         <p class="m-0 text-center text-white">STEI Tazkia &copy; 2017-2027</p>
       </div>
+      <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Klik untuk kembali ke Top page" data-toggle="tooltip" data-placement="left"><i class="fa fa-angle-double-up"></i></a>
       <!-- /.container -->
     </footer>
 
@@ -157,7 +169,28 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1800) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('#back-to-top').tooltip('hide');
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
 
+            $('#back-to-top').tooltip('show');
+
+        });
+    </script>
   </body>
 
 </html>
