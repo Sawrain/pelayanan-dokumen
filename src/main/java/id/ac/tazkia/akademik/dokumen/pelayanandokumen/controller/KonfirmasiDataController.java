@@ -1,4 +1,4 @@
-package id.ac.tazkia.akademik.dokumen.pelayanandokumen;
+package id.ac.tazkia.akademik.dokumen.pelayanandokumen.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +28,11 @@ public class KonfirmasiDataController {
 
     @GetMapping("/notifikasi/sms")
     public void notifikasiSms(){
+
+    }
+
+    @GetMapping("/notifikasi/registrasi-sms")
+    public void notifikasiregSms(){
 
     }
 

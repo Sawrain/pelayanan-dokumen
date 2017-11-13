@@ -15,8 +15,8 @@ public class PelayananDokumenApplication {
 	@Controller
 	class IndexController {
 		@GetMapping("/")
-		public String index(){
-			return "index";
+		public String layout(){
+			return "layout";
 		}
 	}
 }
